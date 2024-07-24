@@ -1,0 +1,182 @@
+** Initialization and Configuration **
+
+git init
+Initialize a new Git repository.
+
+git clone <url>
+Clone a repository into a new directory.
+
+git config --global user.name "Your Name"
+Set the name that will be attached to your commits.
+
+git config --global user.email "your.email@example.com"
+Set the email that will be attached to your commits.
+
+** Working with the Repository **
+
+git status
+Show the working directory status.
+
+git add <file>
+Add file contents to the staging area.
+
+git add .
+Add all changes in the working directory to the staging area.
+
+git commit -m "Commit message"
+Commit the staged changes with a message.
+
+git commit -a -m "Commit message"
+Commit all changes (except untracked files) with a message.
+
+git diff
+Show changes between working directory and staging area.
+
+git diff --staged
+Show changes between staging area and the last commit.
+
+git log
+Show the commit history.
+
+git log --oneline
+Show the commit history in a condensed format.
+
+git log --graph
+Show the commit history as a graph.
+
+git show <commit>
+Show various types of objects (like a commit).
+
+git branch
+List branches.
+
+git branch <branch>
+Create a new branch.
+
+git checkout <branch>
+Switch to another branch.
+
+git checkout -b <branch>
+Create and switch to a new branch.
+
+git merge <branch>
+Merge a branch into the current branch.
+
+git rebase <branch>
+Reapply commits on top of another base tip.
+
+git stash
+Save changes temporarily.
+
+git stash pop
+Reapply the most recently stashed changes.
+
+** Working with Remote Repositories **
+
+git remote -v
+List the remote connections.
+
+git remote add <name> <url>
+Add a new remote repository.
+
+git fetch <remote>
+Download objects and refs from another repository.
+
+git pull
+Fetch from and integrate with another repository or a local branch.
+
+git push <remote> <branch>
+Push local changes to a remote repository.
+
+git push -u <remote> <branch>
+Push local changes to a remote repository and set the upstream branch.
+
+git remote remove <name>
+Remove a remote repository.
+
+** Removing and Reverting Changes **
+
+git rm <file>
+Remove a file from the working directory and stage the removal.
+
+git rm --cached <file>
+Remove a file from version control but keep it locally.
+
+git reset <file>
+Unstage a file.
+
+git reset --hard
+Reset the working directory and staging area to the last commit.
+
+git revert <commit>
+Create a new commit that undoes the changes from a previous commit.
+
+** Advanced Commands **
+git tag <tagname>
+Create a tag for marking a specific point in the repository history.
+
+git tag -a <tagname> -m "Message"
+Create an annotated tag with a message.
+
+git cherry-pick <commit>
+Apply the changes introduced by some existing commits.
+
+git bisect
+Use binary search to find the commit that introduced a bug.
+
+git blame <file>
+Show what revision and author last modified each line of a file.
+
+git reflog
+Show a log of changes to the local repository’s reference logs.
+
+git submodule add <url> <path>
+Add a submodule to the repository.
+
+git submodule update --init
+Initialize, fetch and checkout submodules.
+
+** Adding and Removing the Origin Remote **
+
+git remote add origin <url>
+Add a new remote named "origin" with the specified URL.
+
+git remote remove origin
+Remove the remote named "origin".
+
+Fetching and Pulling from Origin
+git fetch origin
+Fetch updates from the "origin" remote.
+
+git pull origin <branch>
+Pull changes from the specified branch of the "origin" remote into the current branch.
+
+git pull origin --rebase
+Pull changes from "origin" and rebase your local commits on top.
+
+** Pushing to Origin **
+
+git push origin <branch>
+Push your local branch to the corresponding branch on the "origin" remote.
+
+git push origin --tags
+Push all local tags to the "origin" remote.
+
+git push origin --delete <branch>
+Delete a branch on the "origin" remote.
+
+** Viewing and Managing Origin **
+
+git remote -v
+Show all configured remotes, including "origin", with their URLs.
+
+git remote show origin
+Show detailed information about the "origin" remote, including its branches and status.
+
+** Tracking and Setting Upstream Branches **
+
+git branch -u origin/<branch>
+Set the upstream (tracking) branch for your current branch to a branch on "origin".
+
+git push -u origin <branch>
+Push the branch to "origin" and set it as the upstream branch for the current local branch.
